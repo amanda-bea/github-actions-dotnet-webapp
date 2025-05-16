@@ -3,7 +3,7 @@ name: Github4Women
 on:
   push:
   schedule:
-    - cron: '0 * * * *'  # Executa a cada hora (no minuto 0)
+    - cron: '0 * * * *'
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Rodar script ou comando
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'  # Ajuste para a versão que você usa
+          dotnet-version: '8.0.407'
 
       - name: Restaurar dependências
         run: dotnet restore github4women/github4women.csproj
